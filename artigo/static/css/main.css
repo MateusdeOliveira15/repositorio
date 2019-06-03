@@ -1,0 +1,23 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Exo 2', sans-serif;
+    text-transform: none;
+    text-decoration: none;
+    list-style: none;
+}
+.bg-fmb {
+    background-color: #540016;
+}
+
+.btn-fmb {
+    background-color: #1abc9c;
+    color: #fff;
+    transition: 0.2s all;
+}
+
+.btn-fmb:hover{
+    background-color: #16a085;
+}
+

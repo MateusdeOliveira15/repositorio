@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if result %}
+        {% for artigo in result %}
+            {{ artigo }}
+        {% endfor %}
+    {% endif %}
+{% endblock %}
