@@ -4,6 +4,6 @@ from django.urls import path
 from .views import home, search
 
 urlpatterns = [
-    path('', home),
+    path('', home, name="home"),
     path('search', search, name='search')
 ]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

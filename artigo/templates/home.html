@@ -8,8 +8,8 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item dropdown">
+        <ul class="navbar-nav mr-auto menu">
+          <li class="nav-item dropdown menu-fmb">
             <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Menu</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">
               <a class="dropdown-item" href="#">item 01</a>
@@ -33,23 +33,18 @@
     <main role="main" class="container">
 
       <div class="starter-template">
-        <h1>Artigos</h1>
+        <h1>Busca de Artigos</h1>
 
-          <div class="row">
+          <div class="row artigos">
               <div class="col-sm-12 col-md-4">
                   <div class="card" style="width: 18rem;">
                       <div class="card-header">
                         Titulo
                       </div>
                       <ul class="lista-artigo">
-                          <li class="item-artigo"><a href="#">Item 01</a></li>
-                          <li class="item-artigo"><a href="#">Item 01</a></li>
-                          <li class="item-artigo"><a href="#">Item 01</a></li>
-                          <li class="item-artigo"><a href="#">Item 01</a></li>
-                          <li class="item-artigo"><a href="#">Item 01</a></li>
-                          <li class="item-artigo"><a href="#">Item 01</a></li>
-                          <li class="item-artigo"><a href="#">Item 01</a></li>
-                          <li class="item-artigo"><a href="#">Item 01</a></li>
+                          {% for i in artigos %}
+                            <li class="item-artigo"><a href="#">{{ i.titulo }}</a> - <span class="quant">{{ quant }}</span></li>
+                          {% endfor %}
                       </ul>
                   </div>
               </div>

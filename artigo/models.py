@@ -15,7 +15,7 @@ class Artigo(models.Model):
     descricao = models.TextField()
     data_de_publicacao = models.DateField(default=datetime.date.today)
 
-    file = models.FileField(upload_to='artigos', blank=True)
+    link = models.CharField(max_length=999, blank=False, null=True)
 
     def __str__(self):
         return self.titulo
