@@ -3,7 +3,25 @@
 {% block content %}
     {% if result %}
         {% for artigo in result %}
-            {{ artigo }}
+            <div class="card container artigo">
+                <h5>Titulo: </h5> {{ artigo.titulo }}
+                <hr>
+                <h5>Autores: </h5> {{ artigo.autores }}
+                <hr>
+                <h5>Palavras Chaves: </h5> {{ artigo.palavras_chaves }}
+                <hr>
+                <h5>Editor: </h5> {{ artigo.editor }}
+                <hr>
+                <h5>Citação: </h5> {{ artigo.citacao }}
+                <hr>
+                <h5>Resumo: </h5> {{ artigo.resumo }}
+                <hr>
+                <h5>Abstract: </h5> {{ artigo.abstract }}
+                <hr>
+                <h5>Descrição: </h5> {{ artigo.descricao }}
+                <hr>
+                <a href="{{ artigo.link }}"> {{ artigo.link }} </a>
+            </div>
         {% endfor %}
     {% endif %}
 {% endblock %}
